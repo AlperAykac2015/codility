@@ -29,6 +29,8 @@ public class MinAvgTwoSlice {
 					
 			}
 		}
+		System.out.println(indexOfMinOf2+":"+minSumOf2);
+		System.out.println(indexOfMinOf3+":"+minSumOf3);		
 		if(indexOfMinOf3 == -1) {
 			return indexOfMinOf2;
 		}
@@ -40,13 +42,19 @@ public class MinAvgTwoSlice {
 		if(avg3 < avg2) {
 			return indexOfMinOf3;
 		}
+
 		return Math.min(indexOfMinOf2, indexOfMinOf3);
 	}
 	
 	public static void main(String[] args) {
 		MinAvgTwoSlice mats = new MinAvgTwoSlice();
 		System.out.println(mats.solution(new int[] { 10, 11, -20, 5 }));
+		System.out.println(mats.solution(new int[] { 4, 2, 2, 5, 1, 5, 8 }));
+		System.out.println(mats.solution(new int[] { 4, 2, 2, 5, 7, 2, 1 }));
+
+		
 	}
 	
 	
 }
+
